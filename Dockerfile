@@ -5,4 +5,4 @@
  RUN dotnet restore
 
  COPY . .
- RUN dotnet publish --output /out/ --configuration Release ./
+ RUN dotnet publish /app/aspnetcoreangular2.csproj
