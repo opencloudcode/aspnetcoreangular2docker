@@ -1,5 +1,8 @@
-FROM microsoft/aspnetcore-build
-ARG source
-WORKDIR /app
-EXPOSE 80
-ENTRYPOINT ["dotnet", "aspnetcoreangular2.dll"]
+ FROM microsoft/aspnetcore-build
+ WORKDIR /app
+
+ COPY *.csproj .
+ RUN dotnet restore
+
+ COPY . .
+ RUN dotnet publish --output /out/ --configuration Release
