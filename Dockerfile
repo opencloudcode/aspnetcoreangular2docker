@@ -1,6 +1,6 @@
  FROM microsoft/aspnetcore:1.1
  ARG source
  WORKDIR /app
- COPY ..
+ COPY *.csproj .
  ENTRYPOINT ["dotnet", "aspnetcoreangular2.dll"]
  
