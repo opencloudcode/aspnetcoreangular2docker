@@ -17,7 +17,7 @@ namespace aspnetcoreangular2
                 .UseIISIntegration()
                 .UseStartup<Startup>()  
                 .Build();
-                .UseUrls("http://*:8000;http://*:8001;http://localhost:8000")
+                .UseUrls("http://localhost:8000")
             host.Run();
         }
     }
