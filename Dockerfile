@@ -1,8 +1,6 @@
- FROM microsoft/aspnetcore-build
+ FROM microsoft/aspnetcore:1.1
+ ARG source
  WORKDIR /app
-
- COPY *.csproj .
- RUN dotnet restore
-
- COPY . .
- RUN dotnet publish /app/aspnetcoreangular2.csproj
+ COPY ..
+ ENTRYPOINT ["dotnet", "aspnetcoreangular2.dll"]
+ 
